@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+.vite/
+
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+
+# Editor and OS
+.DS_Store
+*.log
+*.swp
+*.swo
+.idea/
+.vscode/
+*.sublime-*
+
+# Optional: if Lovable frontend is kept as a plain clone (not submodule), uncomment:
+# lovable-frontend/
