@@ -4,22 +4,22 @@ Repository for **Open Agent Artel**: planning, design system, versioned snapshot
 
 ## What lives here
 
-- **Design & planning** — Design system, agent storm plans, and versioned snapshots (e.g. V001, V002).
-- **Lovable frontend** — The deployed app is built with [Lovable](https://lovable.dev). Its source will live in the `lovable-frontend/` folder so we can develop and review in this repo while the deployed version stays in sync with the Lovable/GitHub source. *(Add the frontend repo when you have the URL; see [Setup & workflow](docs/SETUP_AND_WORKFLOW.md).)*
+- **Design & planning** — Design system, agent storm plans, and the canonical reference app in `reference-app/`.
+- **Lovable frontend** — The deployed app is built with [Lovable](https://lovable.dev). Its source is in the `lovable-frontend/` submodule (Agent-Artel-studio). We develop and review here; **automated sync** keeps this repo updated when Lovable or an agent pushes to Agent-Artel-studio (sync on push + daily schedule). See [Setup & workflow](docs/SETUP_AND_WORKFLOW.md).
 
 ## Repo structure
 
 | Path | Purpose |
 |------|--------|
-| `lovable-frontend/` | The Lovable app (added as a Git submodule when the repo URL is available). This is the app we develop and that gets deployed. |
-| `V001/`, `V002/`, … | Versioned snapshots or exports (e.g. past builds) for reference. See [docs/VERSION_INDEX.md](docs/VERSION_INDEX.md) for what’s in each version. |
-| `V003/` | Current plan and reference implementation: `AGENT_STORM_PLAN.md`, component library app. |
+| `lovable-frontend/` | The Lovable app (Git submodule → [Agent-Artel-studio](https://github.com/AgentArtel/Agent-Artel-studio)). Develop here; automated sync keeps it updated when changes are pushed there. |
+| `reference-app/` | Canonical reference UI: canvas prototype, components, design system. Synced to Lovable via script. See [docs/VERSION_INDEX.md](docs/VERSION_INDEX.md). |
+| `.github/workflows/` | Automation: syncs `lovable-frontend` from Agent-Artel-studio on push (trigger) and daily at 8 AM UTC. |
 | `inspo_images/` | Reference images. |
-| `docs/` | Documentation for setup and workflow. |
+| `docs/` | Documentation for setup, workflow, and automated sync. |
 
 ## Getting started
 
-1. Clone this repo. If/when `lovable-frontend` is added as a submodule, run:  
+1. Clone this repo, then init the submodule:  
    `git submodule update --init --recursive`
-2. See [docs/SETUP_AND_WORKFLOW.md](docs/SETUP_AND_WORKFLOW.md) for how to add the Lovable frontend and keep it in sync.
-3. Design system and UI rules: see `V003/AGENT_STORM_PLAN.md`.
+2. See [docs/SETUP_AND_WORKFLOW.md](docs/SETUP_AND_WORKFLOW.md) for working in `lovable-frontend`, manual sync, and **automated sync** (on push to Agent-Artel-studio + daily schedule; one-time setup for the trigger is in that doc).
+3. Design system and UI rules: see `reference-app/AGENT_STORM_PLAN.md`.
