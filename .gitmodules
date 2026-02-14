@@ -1,0 +1,3 @@
+[submodule "lovable-frontend"]
+	path = lovable-frontend
+	url = https://github.com/AgentArtel/Agent-Artel-studio.git
