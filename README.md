@@ -13,6 +13,7 @@ Repository for **Open Agent Artel**: planning, design system, versioned snapshot
 |------|--------|
 | `lovable-frontend/` | The Lovable app (Git submodule → [Agent-Artel-studio](https://github.com/AgentArtel/Agent-Artel-studio)). Develop here; automated sync keeps it updated when changes are pushed there. |
 | `reference-app/` | Canonical reference UI: canvas prototype, components, design system. Synced to Lovable via script. See [docs/VERSION_INDEX.md](docs/VERSION_INDEX.md). |
+| `V4/` | Inbox for Kimi V4 delivery. Drop V4 here to review and compare with `reference-app/`; then merge into `reference-app/` so we expand, not replace. See `V4/README.md`. |
 | `.github/workflows/` | Automation: syncs `lovable-frontend` from Agent-Artel-studio on push (trigger) and daily at 8 AM UTC. |
 | `inspo_images/` | Reference images. |
 | `docs/` | Documentation for setup, workflow, and automated sync. |

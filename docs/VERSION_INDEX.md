@@ -68,6 +68,14 @@ Updates to `reference-app/` are synced into the Lovable frontend repo (Agent-Art
 
 ---
 
+## V4 (review inbox)
+
+**Purpose:** Drop the latest Kimi Agent delivery (V4) here for review. Compare with **reference-app/** and merge new/changed work into reference-app so we expand rather than replace. See **V4/README.md** for the workflow. After merging, the canonical code stays in reference-app; V4 can be cleared or archived.
+
+**Location:** `V4/` at the repo root.
+
+---
+
 ## Other (not a version)
 
 **`inspo_images/`** — Folder for reference/inspiration images. Not a versioned snapshot; may be empty or untracked.
